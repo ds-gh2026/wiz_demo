@@ -16,3 +16,8 @@ resource "aws_security_group" "terraform_demo_sg" {
     Demo      = "Wiz"
   }
 }
+
+resource "aws_network_interface_sg_attachment" "attach_demo_sg" {
+  security_group_id      = aws_security_group.terraform_demo_sg.id
+  network_interface_id   = "eni-02e19fe5474a747d2"
+}

@@ -7,7 +7,7 @@
 ##########################################
 # Read existing EC2 Instance
 data "aws_instance" "existing" {
-  instance_id = i-0ce66153d491a52f9
+  instance_id = "i-0ce66153d491a52f9"
 }
 
 ##########################################

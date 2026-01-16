@@ -18,7 +18,7 @@ locals {
 
 ##########################################
 # Add an inbound rule allowing RDP from internet
-resource "aws_security_group" "oepn_rdp" {
+resource "aws_security_group_rule" "oepn_rdp" {
   type              = "ingress"
   security_group_id = "local.security_group_id"
   

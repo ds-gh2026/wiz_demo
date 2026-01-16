@@ -1,19 +1,13 @@
-# 1. Identifies existing EC2 Instance
+# 1. Reads existing EC2 Instance
 # 2. Uses its attached Security Group
 # 3. Adds inbound rule: RDP (3389) allowing connection from anywhere
 # 4. Wiz Detecs exposure
 
-##########################################
-# Identify existing EC2 instance
-variable "instance_id" {
-  type        = string
-  description = "Existing EC2 instance ID"
-}
 
 ##########################################
 # Read existing EC2 Instance
 data "aws_instance" "existing" {
-  instance_id = var.instance_id
+  instance_id = i-0ce66153d491a52f9
 }
 
 ##########################################

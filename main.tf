@@ -13,7 +13,7 @@ data "aws_instance" "existing" {
 ##########################################
 # Select Security Group attached to the EC2 Instance
 locals {
-  security_group_id = tolist(data.aws_instance.existing.vpc_security_group_ids[0])
+  security_group_id = sort(tolist(data.aws_instance.existing.vpc_security_group_ids))[0]
 }
 
 ##########################################
